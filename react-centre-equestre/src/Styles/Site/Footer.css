@@ -1,0 +1,233 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+/* CSS DE LA PARTIE HAUTE DU FOOTER */
+
+.main_newsletter{
+    background-color: var(--hover-vert);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.follow_us {
+    display: flex;
+    align-items: center;  /* Center children vertically */
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    font-size: 32px;
+    width: 50%;
+    gap: 20px;
+    justify-content: center;
+}
+
+.facebook,
+.instagram,
+.tiktok{
+    width: 75px;  /* Adjust the width as needed */
+    height: 75px;  /* Adjust the height as needed */
+    margin-right: 10px;  /* Adjust the spacing between social icons */
+    overflow: hidden; /* Ensure the image is contained within the div */
+}
+
+.facebook:hover,
+.instagram:hover,
+.tiktok:hover{
+    background-color: #48ba7b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.facebook img,
+.instagram img,
+.tiktok img {
+    width: 100%;  /* Make the image fill the entire container */
+    height: 100%; /* Make the image fill the entire container */
+    object-fit: cover;  /* or object-fit: contain; depending on your preference */
+}
+
+.newsletter{
+        display: flex;
+        align-items: center;  /* Center children vertically */
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size: 32px;
+        width: 50%;
+        justify-content: center;
+        gap: 20px;
+}
+
+.mail_news{
+    height: 50Px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    width: 40%;
+    text-align: center;
+}
+
+.newsletterBtn{
+    height: auto;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    border-radius: 10px;
+    background-color: var(--main-vert);
+    border: var(--text-blanc) 3px solid;
+}
+
+.newsletterBtn:hover{
+    background-color: #48ba7b;
+    cursor: pointer;
+}
+
+
+
+/* CSS DE LA PARTIE BASSE DU FOOTER */
+
+.main_all_infos{
+    background-color: var(--main-vert);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-blanc);
+    font-family: 'Inter',sans-serif;
+    font-size: 16px;
+    padding: 15px;
+    flex-direction: row; /* Set flex direction to row */
+    justify-content: space-between; /* Distribute items along the main axis (horizontally) */
+}
+
+.info_gauche{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo_gauche{
+    height: 120px;
+    width: 120px;
+    /* background-color:white ; */
+}
+
+.main_all_infos h2 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.texte_gauche h2{
+    margin-bottom: 0;
+}
+
+.texte_gauche ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styles (e.g., bullet points) */
+}
+
+.texte_gauche ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.info_milieu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+
+.texte_milieu h2{
+    margin-bottom: 0;
+}
+
+.texte_milieu ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; 
+    
+}
+
+.texte_milieu ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.info_droite{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+    text-align: right;
+}
+
+.info_droite a, .info_gauche a {
+    color: var(--text-blanc);
+}
+
+.info_droite a:hover, .info_gauche a:hover {
+    text-decoration: underline;
+}
+
+.texte_droite h2{
+    margin-bottom: 0;
+}
+
+.texte_droite ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styles (e.g., bullet points) */
+}
+
+.texte_droite ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.logo_droite{
+    height: 120px;
+    width: 120px;
+}
+
+.main_all_infos img{
+   
+    width: 100%;  /* Make the image fill the entire container */
+    height: 100%; /* Make the image fill the entire container */
+    object-fit: cover;  /* or object-fit: contain; depending on your preference */
+    border-radius: 109px;
+    border: var(--text-blanc) 2px solid;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+
+}
+
+
+
+
+
+

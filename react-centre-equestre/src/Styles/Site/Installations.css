@@ -1,0 +1,112 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.image_haut_installation {
+    height: 490px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.image_haut_installation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* CSS TITRAGE INSTALLATIONS */
+
+.Titre_install {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50Px;
+}
+
+.Titre_install h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Titre_install h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+    
+   
+}
+
+
+/* CSS LISTE INSTALLATIONS */
+
+.liste_install {
+    display: flex;
+    justify-content: space-between; /* Items are positioned with space between them */
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .liste_install .liste01,
+  .liste_install .liste02 {
+    flex: 1;
+  }
+  
+  .liste_install ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .liste_install li {
+    font-family: 'Alfa Slab One', sans-serif;
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
+    margin: 20px auto; /* Updated margin to 'auto' */
+    width: 60%; /* Updated width to '100%' */
+    padding: 15px;
+    font-size: 20px;
+    max-width: 450Px;
+  }
+
+  .Slide_install{
+    margin-bottom: 50px;
+  }

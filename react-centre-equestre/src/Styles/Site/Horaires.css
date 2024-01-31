@@ -1,0 +1,273 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+body {
+  background-color: var(--text-blanc);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--hover-vert);
+    border-radius: 3rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--main-vert);
+}
+
+.image_haut_horaires {
+    height: 490px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.image_haut_horaires img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 
+CSS HORAIRES ACCUEIL */
+
+.Titre_horaires_accueil {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--main-vert);
+    height: auto;
+    padding: 20px; 
+}
+
+.Titre_horaires_accueil h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Titre_horaires_accueil h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #ffffff; /* Customize the color of the underline */
+    background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
+    border: 3px solid #ffffff;
+}
+
+
+
+.Titre_horaires_accueil p{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-blanc);
+    font-size: 24px;
+}
+
+
+.horaires_accueil span{
+    font-weight: 800;
+}
+
+
+/* 
+CSS HORAIRES PONEY CLUB
+*/
+
+.Horaires_poney_club {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50Px;
+}
+
+.Horaires_poney_club h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Horaires_poney_club h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+}
+
+.texte_horaire_poney_club {
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.cours_poney{
+    text-align: left;
+}
+
+.cours_poney li::before {
+    content: '\2022'; /* Unicode character for a solid circle */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.cours_poney_titre{
+    font-weight: 300;
+    font-size: 24px ;
+    font-family: 'Alfa Slab One', sans-serif;
+}
+
+.tenue_conseille ul{
+    margin: 0;
+}
+
+
+/* CSS AVANTAGES */
+
+/* 
+CSS HORAIRES PONEY CLUB
+*/
+
+.avantages {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50Px;
+}
+
+.avantages h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.avantages h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+}
+
+.texte_avantages {
+    text-align: left;
+}
+
+.texte_avantages span {
+    font-weight: 800;
+}
+
+
+
+/* CSS HORAIRES COURS */
+
+.Horaires_cours {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--main-vert);
+    height: auto;
+    padding: 20px; 
+    color: var(--text-blanc);
+}
+
+.Horaires_cours h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Horaires_cours h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #ffffff; /* Customize the color of the underline */
+    background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
+    border: 3px solid #ffffff;
+}
+
+.cours_telecharger{
+    text-align: center;
+    margin: auto;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 32px;
+}
+
+.horaires_cours_italic{
+    font-style: italic;
+    font-size: 24px;
+    font-weight: 200;
+}

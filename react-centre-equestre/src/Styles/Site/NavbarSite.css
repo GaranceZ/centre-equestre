@@ -1,0 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+body {
+  background-color: var(--text-blanc);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--hover-vert);
+    border-radius: 3rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--main-vert);
+}
+
+  
+   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 20px; */
+    background-color: var(--main-vert); /* You can change the background color as needed */
+    color: white;
+    height: 90px;
+     position: fixed;
+    width: 100%; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  } 
+  
+  .navbar_site {
+    display: flex;
+    /* gap: 20px;  */
+    /* overflow: hidden; */
+    background-color: var(--main-vert);
+    
+  }
+
+
+  
+  img.logo_navbar {
+    max-width: 100px; /* Adjust the max-width as needed */
+    max-height: 70px;
+    padding: 10px; /* Adjust the padding for the image */
+    margin-left: 25px;
+  }
+
+  .text-container {
+    position: relative;
+    display: inline-block;
+    width: 185px;
+    text-align: center;
+    font-family: 'Alfa Slab One', sans-serif;
+  }
+  
+  .text-container:hover {
+    background-color: var(--hover-vert);
+    
+}
+
+.text-container.active{
+  background-color:var(--hover-vert-transparent);
+
+}
+  
+  .text-container a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    padding: 25px; /* Adjusted padding */
+    margin: 5px; /* Adjusted margin */
+}
+  
+  .text-container a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 8px; /* Adjust the height of the underline */
+    background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
+    position: absolute;
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Center adjustment */
+    transition: width 0.3s ease; /* Adjust the animation duration and timing function */
+}
+
+.text-container a:hover::after {
+  width: calc(100% - 45px); /* Adjusted to account for left and right padding */
+    border: 2px solid #ffffff;
+}
+
+
+  
+  .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: var(--hover-vert-transparent);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  .text-container:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 185Px;
+  }
+  
+  .dropdown-content li {
+    text-align: left;
+    border-bottom: 1px solid #dddddd42;
+  }
+
+  .dropdown_texte a{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin: 5px !important;
+  }
+
+  .dropdown_texte a::after{
+    height: 4px !important;
+  }
+  
+  .dropdown-content li:last-child {
+    border-bottom: none;
+  }

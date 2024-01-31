@@ -1,0 +1,130 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
+}
+
+* {
+
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    background-color: var(--text-blanc);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--hover-vert);
+    border-radius: 3rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--main-vert);
+}
+
+.Titre_Equipe {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 50Px;
+    padding-top: 100px;
+}
+
+.Titre_Equipe h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    /* Make the h1 element inline-block */
+}
+
+.Titre_Equipe h1::after {
+    content: "";
+    /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px;
+    /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px;
+    /* Set the height/thickness of the underline */
+    background-color: #148849;
+    /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+
+}
+
+.Equipe_container {
+    /* background-color: var(--main-vert); */
+    margin-top: 40px;
+    color: var(--text-blanc);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch; /* Force cards to have the same height */
+}
+
+.EquipeCard {
+    width: 48%; /* Set to 48% to account for margin and avoid wrapping issues */
+    margin-bottom: 20px; /* Adjust margin as needed */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-vert); /* Optional: Add a background color for visual separation */
+    height: 290px;
+    transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+  }
+  
+  .EquipeCard img {
+    width:50%;
+    height: 100%;
+    object-fit:cover;
+  }
+
+  .EquipeCard:hover {
+    transform: scale(1.1); /* Scale the card up by 10% on hover */
+}
+  
+  .nom_poste{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Optional: Center text horizontally */
+}
+
+.equipe_nom{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 32px;
+}
+
+/* Optional: Add margin between text elements in the column */
+.poste1,
+.poste2 {
+  margin-top: 5px;
+}

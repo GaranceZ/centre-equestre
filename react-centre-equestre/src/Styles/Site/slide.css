@@ -1,0 +1,47 @@
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+.swiper {
+    display: block;
+    width: 100%;
+    height: 35rem;
+    margin-top: 2%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--main-vert);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-blanc) !important;
+}
+
+.swiper-pagination-bullet{
+    background-color: var(--text-blanc);
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.image_fond_login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../../public/assets/Images_Login/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container_form_login {
+    width: 60%;
+    justify-content: center;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #0c502bc9;
+    color: var(--text-blanc);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+}
+
+.container_form_login h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+    z-index: 1;
+}
+
+.container_form_login h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #FBFAF8; /* Customize the color of the underline */
+    background: linear-gradient(to right, #FBFAF8 33%, #00ff0000 33%, #00ff0000 66%, #FBFAF8 66%, #FBFAF8 100%);
+    border: 3px solid #FBFAF8;
+    
+}
+
+.img_form_login {
+    position: absolute;
+    width: auto; /* Adjust the width as needed */
+    height: auto;
+    object-fit: contain;
+    border-radius: 570px;
+    border: var(--text-blanc) 5px solid;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+    opacity: 0.15; /* Adjust opacity as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.img_form_login img {
+    width: auto; /* Ensure the image takes up 100% of the parent container */
+    height: auto;
+    object-fit: cover;
+    border-radius: 570px;
+
+}
+
+.login{
+    padding: 10px;
+    
+}
+
+.form_login {
+    /* Add some spacing to prevent the inputs from overlapping with the image */
+    padding-left: 20px;
+    position: relative; /* Ensure relative positioning for child elements */
+    z-index: 1; /* Ensure form elements are above the image */
+}
+
+.input_login{
+    width: 90%;
+    height: 80px;
+    margin: 10px;
+    color: var(--text-blanc);
+    background-color: #fbfaf834;
+    border: var(--text-blanc) 1px solid;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    padding-left: 5px;
+    text-indent: 20px;
+    z-index: 5;
+}
+
+.input_login::placeholder{
+    color: #fbfaf87e;
+}
+
+.btn_login{
+    background-color: var(--hover-vert);
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    font-size: 32px;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 2;
+    width: 40%;
+    margin-top: 30px;
+    
+}
+
+.btn_login:hover{
+    background-color: #4db87d;
+    cursor: pointer;
+}
+
+.password_forgotten{
+    margin-bottom: 50px;
+}
+
+ .forgotten{
+    color: #fbfaf87e;
+}
+
+.forgotten:hover{
+    color: var(--text-blanc);
+    text-decoration: underline;
+}
+
+
+

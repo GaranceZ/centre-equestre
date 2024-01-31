@@ -1,0 +1,138 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
+}
+
+* {
+
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.liste_equipe {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    max-height: 45vh;
+    overflow: hidden;
+    overflow-y: auto;
+    height: auto;
+}
+
+.liste_equipe::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+
+  .liste_equipe::-webkit-scrollbar-thumb {
+    background-color: var(--text-blanc); /* Set the color of the scrollbar thumb */
+    border-radius: 5px;
+    border: #0C502B 1px solid; /* Set the border radius of the thumb */
+  }
+
+  .liste_equipe::-webkit-scrollbar-track {
+    background-color: var(--main-vert); /* Set the color of the scrollbar track */
+  }
+  
+  .liste_equipe::-webkit-scrollbar-thumb:hover {
+    background-color:#45ac73; /* Set the color on hover */
+  }
+  
+  .liste_equipe::-webkit-scrollbar-corner {
+    background-color: #f0f0f0; /* Set the color of the scrollbar corner */
+  }
+
+.membre_pedag {
+    background-color: var(--main-vert); /* Default background color */
+}
+
+.membre_pedag:nth-child(even) {
+    background-color:var(--hover-vert) /* Set the color for even elements */
+}
+
+ .pedag-details{
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    gap: 50px;
+    margin: 0 auto;
+    align-items: center; /* Center the items horizontally */
+    justify-content: center; /* Center the items vertically */
+    padding: 1%;
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+}
+
+.pedag-details:nth-child(even){
+    background-color: var(--hover-vert);
+}
+
+.pedag-details p{
+    width: 150px;
+}
+
+
+
+.profile-picture {
+    width: 100px; /* Adjust the width of the picture container as needed */
+    height: 100px; /* Adjust the height of the picture container as needed */
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.colored-circle {
+    width: 100%; /* Ensures the circle takes the full width of its container */
+    height: 100%; /* Maintains a square aspect ratio */
+    border-radius: 50%; /* Makes the container round */
+}
+
+
+.add_pedag_container{
+    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.form_add_pedag{
+    background-color: var(--main-vert);
+    padding: 10px;
+}
+
+.form_add_pedag input, .form_add_pedag select{
+    margin: 10px;
+    height: auto;
+    width: auto;
+    background-color: #148849;
+    color: var(--text-blanc);
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 20px;
+    border: #45ac73 1px solid;
+}
+
+.form_add_pedag input::placeholder{
+    color: #fbfaf8c4;
+}
+
+.container_form_pedag button{
+    margin-top: 10px;
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 20px;
+    background-color: var(--hover-vert);
+    padding: 15px;
+}
+
+.container_form_pedag button:hover{
+    background-color:#45ac73;
+}
+
