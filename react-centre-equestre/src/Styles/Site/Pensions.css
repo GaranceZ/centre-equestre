@@ -1,0 +1,198 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root{
+    --background : #FBFAF8;
+    --text-noir : #212121;
+    --main-vert : #0C502B;
+    --hover-vert : #148849;
+    --hover-vert-transparent : #148848bc;
+    --text-blanc: #FBFAF8;    
+}
+
+* {
+   
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+.image_haut_pensions {
+    height: 490px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+}
+
+.image_haut_pensions img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 5% 35%  /* Adjust the values (percentage) based on your preference */
+}
+
+/* CSS TITRAGE PENSIONS */
+
+.Titre_pensions {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40Px;
+}
+
+.Titre_pensions h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Titre_pensions h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+}
+
+.sous_texte_pension, .bold_pensions{
+    font-weight: 800;
+}
+
+.Titre_pensions p:not(.sous_texte_pension) {
+    text-align: left;
+}
+
+.liste_pensions li::before {
+    content: '\2022'; /* Unicode character for a solid circle */
+    color: black; /* You can adjust the color */
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+
+/* CSS ENCADRE PENSIONS */
+
+.texte_pensions {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: var(--main-vert);
+    height: auto;
+    padding: 5px; 
+    color: var(--text-blanc);
+}
+
+.texte_pensions h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.texte_pensions h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #ffffff; /* Customize the color of the underline */
+    background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
+    border: 3px solid #ffffff;
+}
+
+.texte_pensions p:not(.sous_titre_pensions){
+    text-align: left;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.bold_tarifs{
+    font-family: 'Alfa Slab One', sans-serif;
+    font-weight: 300;
+}
+
+.italic_tarifs{
+    font-style: italic;
+    font-weight: 300;
+}
+
+.sous_titre_pensions{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 auto;
+}
+
+
+/* CSS TITRAGE PENSIONS */
+
+.Titre_prestations {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 70Px;
+}
+
+.Titre_prestations h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.Titre_prestations h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+}
+
+.Titre_prestations p:not(.sous_texte_presta){
+    text-align: left;
+}
+
+.sous_texte_presta{
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
