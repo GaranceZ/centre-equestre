@@ -186,9 +186,7 @@
 }
 
 .captcha{
-    height: 50px;
-    background-color: antiquewhite;
-    padding: 20px;
+    margin: 0 auto;
 }
 
 .bouton_contact{

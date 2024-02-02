@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../../Styles/Admin/ListeMembres.css';
 import MembresService from '../../Services/MembresService';
 import { toast } from 'react-toastify';
+import CryptoJS from 'crypto-js';
 
 const ListeMembreAdmin = () => {
     const [membres, setMembres] = useState([]);
@@ -33,9 +34,19 @@ const ListeMembreAdmin = () => {
         setAddMembre({ ...addMembre, [name]: value });
     };
 
+   
     const handleModifyInputChange = (e) => {
         const { name, value } = e.currentTarget;
-        setUpdatedData({ ...updatedData, [name]: value });
+    
+        // Check if the input is the password field and a new password is provided
+        if (name === 'mdpUser' && value.trim() !== '') {
+            // Hash the new password using SHA-256 (or your preferred hashing algorithm)
+            const hashedPassword = CryptoJS.SHA256(value).toString();
+            setUpdatedData({ ...updatedData, [name]: hashedPassword });
+        } else {
+            // If no new password is provided, keep the existing hashed password
+            setUpdatedData({ ...updatedData, [name]: value });
+        }
     };
 
     const handleAddMembre = async (e) => {
@@ -55,15 +66,18 @@ const ListeMembreAdmin = () => {
 
     const handleupdatedData = async (id) => {
         try {
-            const response = await MembresService.updateMember(id,
-            updatedData.nomUser,
-            updatedData.prenomUser,
-            updatedData.mailUser,
-            updatedData.phoneUser,
-            updatedData.mdpUser,
-            updatedData.galopUser,
-            updatedData.coursUser);
-
+          
+            const response = await MembresService.updateMember(
+                id,
+                updatedData.nomUser,
+                updatedData.prenomUser,
+                updatedData.mailUser,
+                updatedData.phoneUser,
+                updatedData.mdpUser, // Use the new or former password based on the condition
+                updatedData.galopUser,
+                updatedData.coursUser
+            );
+    
             console.log(response);
             toast.success("L'utilisateur a bien été modifié dans votre liste");
             fetchMembres();
@@ -117,7 +131,7 @@ const ListeMembreAdmin = () => {
                                 <div className='icon_delete'>
                                     <i class='bx bxs-trash' style={{ fontSize: 30 + 'px' }} onClick={() => handleDeleteMembre(users.USER_ID)}></i>
                                 </div>
-                                <div className='icon_modify'>
+                                <div className='icon_delete'>
                                     <i
                                         className='bx bxs-edit'
                                         style={{ fontSize: 30 + 'px' }}
@@ -128,11 +142,12 @@ const ListeMembreAdmin = () => {
                                                 id: users.USER_ID,
                                                 nomUser: users.USER_Nom,
                                                 prenomUser: users.USER_Prenom,
+                                                galopUser: users.USER_Galop,
+                                                coursUser: users.USER_CoursRestants,
                                                 mailUser: users.USER_Mail,
                                                 phoneUser: users.USER_Telephone,
                                                 mdpUser: users.USER_Password,
-                                                galopUser: users.USER_Galop,
-                                                coursUser: users.USER_CoursRestants
+                                                
                                             });
                                         }}
                                     ></i>
@@ -164,6 +179,26 @@ const ListeMembreAdmin = () => {
                                     onChange={handleModifyInputChange}
                                 />
                                 <input
+                                    type="number"
+                                    id="coursUser"
+                                    name="coursUser"
+                                    placeholder="Nombre de cours"
+                                    required
+                                    value={updatedData.coursUser}
+                                    onChange={handleModifyInputChange}
+                                />
+                                <input
+                                    type="number"
+                                    id="galopUser"
+                                    name="galopUser"
+                                    placeholder="Galop"
+                                    required
+                                    value={updatedData.galopUser}
+                                    onChange={handleModifyInputChange}
+                                    max={7}
+                                />
+                                
+                                <input
                                     type="email"
                                     id="mailUser"
                                     name="mailUser"
@@ -173,7 +208,7 @@ const ListeMembreAdmin = () => {
                                     onChange={handleModifyInputChange}
                                 />
                                 <input
-                                    type="tel"
+                                    type="text"
                                     id="phoneUser"
                                     name="phoneUser"
                                     pattern="[0-9]{10}"
@@ -189,28 +224,9 @@ const ListeMembreAdmin = () => {
                                     name="mdpUser"
                                     placeholder="Mot de passe"
                                     required
-                                    value={updatedData.mdpUser}
                                     onChange={handleModifyInputChange}
                                 />
-                                <input
-                                    type="number"
-                                    id="galopUser"
-                                    name="galopUser"
-                                    placeholder="Galop"
-                                    required
-                                    value={updatedData.galopUser}
-                                    onChange={handleModifyInputChange}
-                                    max={7}
-                                />
-                                <input
-                                    type="number"
-                                    id="coursUser"
-                                    name="coursUser"
-                                    placeholder="Nombre de cours"
-                                    required
-                                    value={updatedData.coursUser}
-                                    onChange={handleModifyInputChange}
-                                />
+                                
                                 <button type="button" onClick={() => handleupdatedData(updatedData.id)}>
                                     Modifier
                                 </button>

@@ -1,7 +1,58 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import '../../Styles/Site/Contact.css'
+import { toast } from 'react-toastify';
+import contactService from '../../Services/ContactService';
+import ReCAPTCHA from 'react-google-recaptcha';
+//6LcBkGQpAAAAALOUhxwZGbHMewPAOuipxPcQhHix
 
 const ContactComponent = () => {
+    const [formData, setFormData] = useState({
+        nom_contact: '',
+        prenom_contact: '',
+        email_contact: '',
+        tel_contact: '',
+        sujet_contact: '',
+        message_contact: '',
+    });
+
+    const [capVal, setCapVal] = useState(null);
+    const recaptchaRef = useRef(null);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = contactService.sendEmailContact(formData);
+            console.log('Formulaire soumis avec succès!');
+            // Réinitialiser le formulaire après la soumission réussie
+            setFormData({
+                nom_contact: '',
+                prenom_contact: '',
+                email_contact: '',
+                tel_contact: '',
+                sujet_contact: '',
+                message_contact: '',
+            });
+
+            // Reset the captcha after successful submission
+        setCapVal(null);
+         // Reset the ReCAPTCHA
+         if (recaptchaRef.current) {
+            recaptchaRef.current.reset();
+        }
+
+            toast.success("Votre message a bien été envoyé");
+        } catch (error) {
+            console.error('Erreur lors de la soumission du formulaire', error);
+            toast.error("Votre message n'a pas pu être envoyé");
+        }
+    };
+
+
     return (
         <>
             <div className='image_haut_contact'>
@@ -12,73 +63,84 @@ const ContactComponent = () => {
                 <h1>Contactez-nous</h1>
 
                 <div className="container_form">
-                <div className="img_form">
-                            <img src={process.env.PUBLIC_URL + '/assets/logo_footer/logo_site.png'} alt='Logo du site' />
-                        </div>
+                    <div className="img_form">
+                        <img src={process.env.PUBLIC_URL + '/assets/logo_footer/logo_site.png'} alt='Logo du site' />
+                    </div>
                     <div className="form">
-                    <form className='contact'>
-                        <input
-                            className="input_contact"
-                            type="text"
-                            name="nom_contact"
-                            id="nom_contact"
-                            placeholder="Nom*"
-                            required
-                        />
-                        <br />
-                        <input
-                            className="input_contact"
-                            type="text"
-                            name="prenom_contact"
-                            id="prenom_contact"
-                            placeholder="Prénom"
+                        <form className='contact' onSubmit={handleSubmit}>
+                            <input
+                                className="input_contact"
+                                type="text"
+                                name="nom_contact"
+                                id="nom_contact"
+                                placeholder="Nom*"
+                                required
+                                value={formData.nom_contact}
+                                onChange={handleChange}
+                            />
+                            <br />
+                            <input
+                                className="input_contact"
+                                type="text"
+                                name="prenom_contact"
+                                id="prenom_contact"
+                                placeholder="Prénom"
+                                value={formData.prenom_contact}
+                                onChange={handleChange}
+                            />
+                            <br />
+                            <input
+                                className="input_contact"
+                                type="text"
+                                name="email_contact"
+                                id="email_contact"
+                                placeholder="Adresse mail*"
+                                required
+                                value={formData.email_contact}
+                                onChange={handleChange}
 
-                        />
-                        <br />
-                        <input
-                            className="input_contact"
-                            type="text"
-                            name="email_contact"
-                            id="email_contact"
-                            placeholder="Adresse mail*"
-                            required
+                            />
+                            <br />
+                            <input
+                                className="input_contact"
+                                type="text"
+                                name="tel_contact"
+                                id="tel_contact"
+                                placeholder="Téléphone*"
+                                required
+                                value={formData.tel_contact}
+                                onChange={handleChange}
 
-                        />
-                        <br />
-                        <input
-                            className="input_contact"
-                            type="text"
-                            name="tel_contact"
-                            id="tel_contact"
-                            placeholder="Téléphone*"
-                            required
+                            />
+                            <br />
+                            <select name='sujet_contact' className="sujet_contact" required value={formData.sujet_contact}
+                                onChange={handleChange} >
+                                <option className="sujet_default" value="">--Sujet de votre message*-- &#9660;</option>
+                                <option value="Anniversaire">Anniversaire</option>
+                                <option value="Baptême poney/cheval">Baptême poney/cheval</option>
+                                <option value="Horaires">Horaires</option>
+                                <option value="Tarifs">Tarifs</option>
+                                <option value="Pensions">Pensions</option>
+                            </select>
+                            <br />
+                            <textarea
+                                className="textarea_contact"
+                                name="message_contact"
+                                id="message_contact"
+                                placeholder="Message*"
+                                required
+                                value={formData.message_contact}
+                                onChange={handleChange}
+                            ></textarea>
+                            <br />
+                            <div className='captcha_btn'>
 
-                        />
-                        <br />
-                        <select name='Sujet'className="sujet_contact" required >
-                            <option className="sujet_default" value="">--Sujet de votre message*-- &#9660;</option>
-                            <option value="Anniversaire">Anniversaire</option>
-                            <option value="Anniversaire">Baptême poney/cheval</option>
-                            <option value="Anniversaire">Horaires</option>
-                            <option value="Anniversaire">Tarifs</option>
-                            <option value="Anniversaire">Pensions</option>
-                        </select>
-                        <br />
-                        <textarea
-                            className="textarea_contact"
-                            name="message_contact"
-                            id="message_contact"
-                            placeholder="Message*"
-                            required
-                        ></textarea>
-                        <br />
-                        <div className='captcha_btn'>
-                            <div className="captcha">
-
+                                
+                                    <ReCAPTCHA  ref={recaptchaRef} sitekey='6LcBkGQpAAAAALOUhxwZGbHMewPAOuipxPcQhHix' onChange={val => setCapVal(val)} style={{ width: '100%' }} className='captcha'/>
+                                
+                                <button className="bouton_contact" type="submit" disabled={!capVal}>ENVOYER</button>
                             </div>
-                        <button className="bouton_contact" type="submit">ENVOYER</button>
-                        </div>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
