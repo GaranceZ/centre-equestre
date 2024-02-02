@@ -17,7 +17,7 @@ function removeUser(id){
 }
 
 function updateMember(id, nomUser, prenomUser, mailUser, phoneUser, mdpUser, galopUser, coursUser) {
-    const url = `http://${URL}:8080/user/`; // Adjust the URL based on your API endpoint for updating members
+    const url = `http://${URL}:8080/user/admin-update`; // Adjust the URL based on your API endpoint for updating members
     const data = {
         id: id,
         nomUser: nomUser,
@@ -38,9 +38,30 @@ function updateMember(id, nomUser, prenomUser, mailUser, phoneUser, mdpUser, gal
     });
 }
 
+function updateSelfMember(id, nomUser, prenomUser, mailUser, phoneUser, mdpUser) {
+    const url = `http://${URL}:8080/user/update`; // Adjust the URL based on your API endpoint for updating members
+    const data = {
+        id: id,
+        nomUser: nomUser,
+        prenomUser: prenomUser,
+        mailUser: mailUser,
+        phoneUser: phoneUser,
+        mdpUser: mdpUser,
+    };
+
+    console.log('Request Data:', data);
+
+    return axios.patch(url, { ...data }, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
 export default {
     fetchAllMembres,
     addMembre,
     removeUser,
-    updateMember
+    updateMember,
+    updateSelfMember
 };

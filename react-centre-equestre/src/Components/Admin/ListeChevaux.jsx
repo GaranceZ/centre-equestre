@@ -23,7 +23,6 @@ const ListeChevauxComponent = () => {
         const fileName = e.target.files[0].name;
         setAddChevaux({ ...addChevaux, photoCheval: fileName });
         console.log('File Name:', fileName);
-        // Do whatever you need with the file name
     };
 
     const handleAddChevaux = async (e) => {

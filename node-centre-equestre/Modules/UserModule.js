@@ -38,16 +38,16 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     const currentId = req.params.id;
-    userService.deleteUser(currentId).then(
-        (result) => {
-            res.json({ data: result[0], message: `L'user' ${currentId} a bien été supprimé de la base de données` });
-        }
-    ).catch(() => {
-        res.json({ message: 'Une erreur est survenue' });
-    })
+    userService.deleteUser(currentId)
+        .then((result) => {
+            res.json({ data: result[0], message: `L'utilisateur ${currentId} a bien été supprimé de la base de données` });
+        })
+        .catch(() => {
+            res.json({ message: 'Une erreur est survenue lors de la suppression' });
+        });
 });
 
-router.patch('/', (req, res) => {
+router.patch('/admin-update', (req, res) => {
     const data = req.body;
     const userId = data.id;
     console.log(data);
@@ -73,4 +73,27 @@ router.patch('/', (req, res) => {
         });
 });
 
+router.patch('/update', (req, res) => {
+    const data = req.body;
+    const userId = data.id;
+    console.log(data);
+
+    const updatedData = {
+        id: userId,
+        nomUser: data.nomUser,
+        prenomUser: data.prenomUser,
+        mailUser: data.mailUser,
+        phoneUser: data.phoneUser,
+        mdpUser: data.mdpUser
+    };
+
+    userService.updateSelfUser(updatedData)
+        .then(result => {
+            res.status(201).json(updatedData);  // Return only updatedData in the response
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).json({ message: 'Une erreur est survenue lors de la mise à jour de l\'équipe' });
+        });
+});
 module.exports = router;

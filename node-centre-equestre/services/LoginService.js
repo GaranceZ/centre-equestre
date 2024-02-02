@@ -3,7 +3,7 @@ const conn = require("./database");
 const getUserByEmail = (user) => {
     return new Promise((resolve, reject) => {
         const sql = `SELECT * FROM user WHERE USER_MAIL = ?;`;
-        console.log('Executing SQL query:', sql, 'with parameters:', [user]);
+        
         conn.query(sql, [user], (error, results) => {
             if (error) {
                 console.error('Error fetching user by email:', error);

@@ -1,0 +1,178 @@
+@import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
+}
+
+* {
+
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+}
+
+.profil_membre {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    /* This centers the div horizontally */
+    width: 80%;
+    /* Adjust margin or padding based on sidebar width */
+    margin-left: 20%;
+    /* Other content styles */
+    padding: 2%;
+    height: auto;
+    min-height: 300px;
+    /* Set a minimum height */
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25em;
+
+}
+
+.nom_prenom h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 2em;
+    font-weight: 200;
+    margin-top: 40px;
+}
+
+.nom_prenom p {
+    max-width: 90%;
+    font-weight: 300;
+}
+
+.infos_membre_container {
+    border: #212121 1px solid;
+    max-height: 100vh;
+    /* Set the maximum height to 100% of the viewport height */
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    /* Stack items in a column layout */
+    align-items: center;
+    padding: 5px;
+}
+
+.infos_membre {
+    margin: 5px;
+    /* Optional: Add margin between the divs */
+    text-align: center;
+    /* Center text within each div */
+    font-family: 'Alfa Slab One', sans-serif;
+    font-weight: 200;
+}
+
+.infos_membre h3 {
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.infos_membre p {
+    background-color: var(--main-vert);
+    color: var(--text-blanc);
+    padding: 10px;
+    margin: 0 auto;
+    width: auto;
+    display: inline;
+    /* Display inline to adjust the background to the text */
+}
+
+.infos_membre button {
+    display: block;
+    /* Set button to display as a block to appear below the paragraph */
+    margin: 25px auto 0;
+    /* Top margin: 50px, Center horizontally, No bottom margin */
+    background-color: var(--hover-vert);
+    color: var(--text-blanc);
+    font-family: 'Alfa Slab One', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.infos_membre button:hover{
+    background-color:#45ac73;
+}
+
+.deleteBtn button{
+    background-color: #ff2525;
+}
+
+.deleteBtn button:hover{
+    background-color: #ff6767;
+}
+
+
+
+.modify_membre_container {
+
+    padding: 15px; 
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    
+  }
+
+  .modify_membre_container h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+    display: inline-block; /* Make the h1 element inline-block */
+}
+
+.modify_membre_container h1::after {
+    content: ""; /* Add an empty content property for pseudo-elements */
+    position: absolute;
+    bottom: -10px; /* Adjust the distance from the text */
+    left: 0;
+    width: 100%;
+    height: 10px; /* Set the height/thickness of the underline */
+    background-color: #148849; /* Customize the color of the underline */
+    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+    border: 3px solid #148849;
+}
+
+.container_form_membre{
+    background-color: var(--main-vert);
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.container_form_membre input{
+    margin: 10px;
+    height: auto;
+    background-color: #148849;
+    color: var(--text-blanc);
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 20px;
+    
+}
+
+.container_form_membre input::placeholder{
+    color: #fbfaf8c4;
+}
