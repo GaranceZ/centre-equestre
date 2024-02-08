@@ -6,6 +6,16 @@ import CryptoJS from 'crypto-js';
 
 const ListeMembreAdmin = () => {
     const [membres, setMembres] = useState([]);
+    const [token, setToken] = useState(null); // State to store the token
+
+    useEffect(() => {
+        // Example: Retrieve token from local storage after successful login
+        const storedToken = localStorage.getItem('token');
+        if (storedToken) {
+            setToken(storedToken);
+        }
+    }, []);
+    
     const [addMembre, setAddMembre] = useState({
         nomUser: '',
         prenomUser: '',
@@ -251,8 +261,13 @@ const ListeMembreAdmin = () => {
                             </form>
                         </div>
                     </div>
+                    <div className="blankspace">
+                    <p></p>
                 </div>
+                </div>
+                
             </div>
+         
         </>
     );
 }

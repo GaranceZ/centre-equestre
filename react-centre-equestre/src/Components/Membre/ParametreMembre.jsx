@@ -17,7 +17,7 @@ const ParametreMembre = () => {
     phoneUser: '',
     mdpUser: ''
   });
-  const [selectedUserId, setSelectedUserId] = useState(user.USER_ID);
+  const [selectedUserId, setSelectedUserId] = useState(user ? user.USER_ID : '');
   const navigate = useNavigate();
 
 
@@ -126,8 +126,9 @@ const ParametreMembre = () => {
             <h3>Mot de passe</h3>
             <p>********</p>
             <button type='button' onClick={() => {
+          
               setShowModifyInput(true);
-              setSelectedUserId(user.USER_ID);
+              setSelectedUserId(user ? user.USER_ID : '');
               setUpdatedData({
                 id: user.USER_ID,
                 nomUser: user.USER_Nom,
@@ -137,6 +138,14 @@ const ParametreMembre = () => {
                 mdpUser: user.USER_Password,
 
               });
+
+       // Delay the scrollIntoView function
+    setTimeout(() => {
+      const targetElement = document.getElementById('targetElement');
+      if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+  }, 0); // Adjust delay as needed
             }}>Modifier mes informations</button>
             <div className='deleteBtn'>
             <button
@@ -148,11 +157,25 @@ const ParametreMembre = () => {
             </div>
           </div>
 
+          <div className="blankspace">
+
+          </div>
 
 
 
-          {showModifyInput && (
-            <div className="modify_membre_container">
+
+          
+
+
+        </div>
+        <div className="blankspace">
+            <p></p>
+        </div>
+
+        
+
+        {showModifyInput && (
+            <div className="modify_membre_container" >
               <h1>Modifier mes informations</h1>
               <div className="container_form_membre">
                 <input
@@ -207,10 +230,9 @@ const ParametreMembre = () => {
               </div>
             </div>
           )}
-
-
-        </div>
+          <div id="targetElement"></div>
       </div>
+      
 
     </>
   );

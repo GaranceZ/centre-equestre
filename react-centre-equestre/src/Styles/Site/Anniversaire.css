@@ -2,17 +2,17 @@
 @import url('https://fonts.cdnfonts.com/css/inter');
 
 
-:root{
-    --background : #FBFAF8;
-    --text-noir : #212121;
-    --main-vert : #0C502B;
-    --hover-vert : #148849;
-    --hover-vert-transparent : #148848bc;
-    --text-blanc: #FBFAF8;    
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
 }
 
 * {
-   
+
     text-decoration: none;
     list-style: none;
     outline: none;
@@ -20,8 +20,9 @@
     scroll-behavior: smooth;
     user-select: none;
 }
+
 body {
-  background-color: var(--text-blanc);
+    background-color: var(--text-blanc);
 }
 
 html::-webkit-scrollbar {
@@ -43,7 +44,8 @@ html::-webkit-scrollbar-track {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the container */
 }
 
 .image_haut_anniversaire img {
@@ -71,22 +73,27 @@ html::-webkit-scrollbar-track {
     font-size: 48px;
     font-weight: 400;
     position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
+    display: inline-block;
+    /* Make the h1 element inline-block */
 }
 
 .Titre_anniversaire h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
+    content: "";
+    /* Add an empty content property for pseudo-elements */
     position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
+    bottom: -10px;
+    /* Adjust the distance from the text */
     left: 0;
     width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #148849; /* Customize the color of the underline */
+    height: 10px;
+    /* Set the height/thickness of the underline */
+    background-color: #148849;
+    /* Customize the color of the underline */
     background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
     border: 3px solid #148849;
 }
 
-.bold_text_anniversaire{
+.bold_text_anniversaire {
     font-weight: 800;
 }
 
@@ -95,13 +102,14 @@ html::-webkit-scrollbar-track {
 }
 
 .liste_anniversaire li::before {
-    content: '\2022'; /* Unicode character for a solid circle */
+    content: '\2022';
+    /* Unicode character for a solid circle */
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
 
-.anniversaire_quand{
+.anniversaire_quand {
     background-color: var(--main-vert);
     color: var(--text-blanc);
     font-size: 24px;
@@ -111,11 +119,11 @@ html::-webkit-scrollbar-track {
     margin: 0 auto;
 }
 
-.anniversaire_quand p{
+.anniversaire_quand p {
     margin: 0;
 }
 
-.anniversaire_quand .bold_quand{
+.anniversaire_quand .bold_quand {
     font-weight: 700;
 }
 
@@ -142,48 +150,54 @@ CSS DEROULE
     font-size: 48px;
     font-weight: 400;
     position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
+    display: inline-block;
+    /* Make the h1 element inline-block */
 }
 
 .Titre_deroule h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
+    content: "";
+    /* Add an empty content property for pseudo-elements */
     position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
+    bottom: -10px;
+    /* Adjust the distance from the text */
     left: 0;
     width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #148849; /* Customize the color of the underline */
+    height: 10px;
+    /* Set the height/thickness of the underline */
+    background-color: #148849;
+    /* Customize the color of the underline */
     background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
     border: 3px solid #148849;
 }
 
-.Titre_deroule p{
+.Titre_deroule p {
     text-align: left;
     margin-top: 5px;
 }
 
-.tenue_conseillee{
+.tenue_conseillee {
     margin-top: 20px !important;
 }
 
 .Titre_deroule li::before {
-    content: '\2022'; /* Unicode character for a solid circle */
+    content: '\2022';
+    /* Unicode character for a solid circle */
     display: inline-block;
     width: 1em;
     margin-left: -1em;
 }
 
-.tenue_conseille_bold{
+.tenue_conseille_bold {
     font-weight: 700;
-    font-size: 24px ;
+    font-size: 24px;
     margin-bottom: 0 !important;
 }
 
-.tenue_conseille ul{
+.tenue_conseille ul {
     margin: 0;
 }
 
-.Tarif_Anniversaire{
+.Tarif_Anniversaire {
     width: 80%;
     justify-content: center;
     margin: 0 auto;
@@ -203,26 +217,31 @@ CSS DEROULE
     font-size: 48px;
     font-weight: 400;
     position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
+    display: inline-block;
+    /* Make the h1 element inline-block */
 }
 
 .Tarif_Anniversaire h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
+    content: "";
+    /* Add an empty content property for pseudo-elements */
     position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
+    bottom: -10px;
+    /* Adjust the distance from the text */
     left: 0;
     width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #ffffff; /* Customize the color of the underline */
+    height: 10px;
+    /* Set the height/thickness of the underline */
+    background-color: #ffffff;
+    /* Customize the color of the underline */
     background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
     border: 3px solid #ffffff;
 }
 
-.Infos_tarifs{
+.Infos_tarifs {
     margin-top: 20px;
 }
 
-.Tarif_Anniversaire p{
+.Tarif_Anniversaire p {
     text-align: center;
     margin: auto;
     margin-bottom: 20px;
@@ -235,7 +254,7 @@ CSS DEROULE
     text-align: center !important;
 }
 
-.anniv_italic{
+.anniv_italic {
     font-family: 'Inter', sans-serif !important;
     text-align: center !important;
     font-weight: 300;
@@ -245,10 +264,251 @@ CSS DEROULE
     margin-bottom: 50px !important;
 }
 
- .anniv_download {
+.anniv_download {
     font-family: 'Inter', sans-serif !important;
     font-size: 28px !important;
     text-align: center !important;
     padding-bottom: 50px;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+
+    .image_haut_anniversaire {
+        height: 290px;
+        background-color: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* Ensure the image doesn't overflow the container */
+    }
+
+    .image_haut_anniversaire img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CSS TITRAGE ANNIVERSAIRE */
+
+    .Titre_anniversaire {
+        width: 90%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 40Px;
+    }
+
+    .Titre_anniversaire h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block;
+        /* Make the h1 element inline-block */
+    }
+
+    .Titre_anniversaire h1::after {
+        content: "";
+        /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px;
+        /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px;
+        /* Set the height/thickness of the underline */
+        background-color: #148849;
+        /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+    }
+
+    .bold_text_anniversaire {
+        font-weight: 800;
+    }
+
+    .liste_anniversaire {
+        text-align: left;
+    }
+
+    .liste_anniversaire li::before {
+        content: '\2022';
+        /* Unicode character for a solid circle */
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .anniversaire_quand {
+        background-color: var(--main-vert);
+        color: var(--text-blanc);
+        font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        padding: 15px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .anniversaire_quand p {
+        margin: 0;
+    }
+
+    .anniversaire_quand .bold_quand {
+        font-weight: 700;
+    }
+
+
+
+    /* 
+    CSS DEROULE 
+    */
+
+    .Titre_deroule {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 50Px;
+    }
+
+    .Titre_deroule h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block;
+        /* Make the h1 element inline-block */
+    }
+
+    .Titre_deroule h1::after {
+        content: "";
+        /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px;
+        /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px;
+        /* Set the height/thickness of the underline */
+        background-color: #148849;
+        /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+    }
+
+    .Titre_deroule p {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    .tenue_conseillee {
+        margin-top: 20px !important;
+    }
+
+    .Titre_deroule li::before {
+        content: '\2022';
+        /* Unicode character for a solid circle */
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+
+    .tenue_conseille_bold {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 0 !important;
+    }
+
+    .tenue_conseille ul {
+        margin: 0;
+    }
+
+    .Tarif_Anniversaire {
+        width: 95%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 50px;
+        background-color: var(--main-vert);
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .Tarif_Anniversaire h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size:34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block;
+        /* Make the h1 element inline-block */
+    }
+
+    .Tarif_Anniversaire h1::after {
+        content: "";
+        /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px;
+        /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px;
+        /* Set the height/thickness of the underline */
+        background-color: #ffffff;
+        /* Customize the color of the underline */
+        background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
+        border: 3px solid #ffffff;
+    }
+
+    .Infos_tarifs {
+        margin-top: 20px;
+    }
+
+    .Tarif_Anniversaire p {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size: 20px;
+    }
+
+    .anniv_formulaire {
+        text-align: center !important;
+        font-size: 20px;
+    }
+
+    .anniv_italic {
+        font-family: 'Inter', sans-serif !important;
+        text-align: center !important;
+        font-weight: 300;
+        font-size: 20px !important;
+        font-style: italic;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+        width: 90%;
+    }
+
+    .anniv_download {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 20px !important;
+        text-align: center !important;
+        padding-bottom: 50px;
+        text-decoration: underline;
+
+    }
 }

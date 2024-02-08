@@ -135,9 +135,9 @@ const ContactComponent = () => {
                             <br />
                             <div className='captcha_btn'>
 
-                                
-                                    <ReCAPTCHA  ref={recaptchaRef} sitekey='6LcBkGQpAAAAALOUhxwZGbHMewPAOuipxPcQhHix' onChange={val => setCapVal(val)} style={{ width: '100%' }} className='captcha'/>
-                                
+                                <div className='captcha'>
+                                    <ReCAPTCHA  ref={recaptchaRef} sitekey='6LcBkGQpAAAAALOUhxwZGbHMewPAOuipxPcQhHix' onChange={val => setCapVal(val)} />
+                                </div>
                                 <button className="bouton_contact" type="submit" disabled={!capVal}>ENVOYER</button>
                             </div>
                         </form>

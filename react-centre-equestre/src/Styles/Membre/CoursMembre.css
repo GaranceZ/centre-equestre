@@ -2,61 +2,210 @@
 @import url('https://fonts.cdnfonts.com/css/inter');
 
 
-:root{
-    --background : #FBFAF8;
-    --text-noir : #212121;
-    --main-vert : #0C502B;
-    --hover-vert : #148849;
-    --hover-vert-transparent : #148848bc;
-    --text-blanc: #FBFAF8;    
+:root {
+  --background: #FBFAF8;
+  --text-noir: #212121;
+  --main-vert: #0C502B;
+  --hover-vert: #148849;
+  --hover-vert-transparent: #148848bc;
+  --text-blanc: #FBFAF8;
 }
 
 * {
-   
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-    border: none;
-    scroll-behavior: smooth;
-    user-select: none;
+
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  border: none;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cours_membre {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* This centers the div horizontally */
+  width: 80%;
+  /* Adjust margin or padding based on sidebar width */
+  margin-left: 20%;
+  /* Other content styles */
+  padding: 2%;
+  height: auto;
+  min-height: 300px;
+  /* Set a minimum height */
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25em;
+
+}
+
+.infos_cours_container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 5px;
+  border: black solid 1px;
+  margin-bottom: 20px;
+}
+
+.child-div {
+  flex: 1;
+  /* Make both child-divs take equal width */
+  max-width: 500px;
+  border: 1px solid #000000;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 600px;
+  text-align: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.child-div h1 {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  /* Make the h1 element inline-block */
+}
+
+.child-div h1::after {
+  content: "";
+  /* Add an empty content property for pseudo-elements */
+  position: absolute;
+  bottom: -10px;
+  /* Adjust the distance from the text */
+  left: 0;
+  width: 100%;
+  height: 10px;
+  /* Set the height/thickness of the underline */
+  background-color: #148849;
+  /* Customize the color of the underline */
+  background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+  border: 3px solid #148849;
+}
+
+.scrollable-wrapper {
+  position: relative;
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+.scrollable-container {
+  width: 90%;
+  margin: auto;
+  /* Center the container horizontally */
+  margin-top: 40px;
+  max-height: 450px;
+  overflow-y: auto;
+  /* Adjust based on the scrollbar width */
+}
+
+.scrollable-container::-webkit-scrollbar {
+  width: 10px;
+  /* Set the width of the scrollbar */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: var(--text-blanc);
+  /* Set the color of the scrollbar thumb */
+  border-radius: 5px;
+  border: #0C502B 1px solid;
+  /* Set the border radius of the thumb */
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background-color: var(--main-vert);
+  /* Set the color of the scrollbar track */
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+  background-color: #33ee87;
+  /* Set the color on hover */
+}
+
+.scrollable-container::-webkit-scrollbar-corner {
+  background-color: #f0f0f0;
+  /* Set the color of the scrollbar corner */
+}
+
+.sub-div {
+  background-color: var(--main-vert);
+  padding: 10px;
+  /* width: 80%; */
+  margin: 0 auto;
+  font-family: 'Alfa Slab One', sans-serif;
+  color: var(--text-blanc);
+}
+
+.sub-div:nth-child(even) {
+  background-color: var(--hover-vert)
+    /* Set your desired background color for odd rows */
+}
+
+/* .cours_membre h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+  }*/
+
+.cours_membre p {
+  margin: 0;
+}
+
+.blankspace p {
+  height: 10px;
+}
+
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
 
   .cours_membre {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     /* This centers the div horizontally */
-    width: 80%;
+    width: 90%;
     /* Adjust margin or padding based on sidebar width */
-    margin-left: 20%;
+    /* margin-left: 20%; */
     /* Other content styles */
     padding: 2%;
     height: auto;
-    min-height: 300px;
     /* Set a minimum height */
     font-family: 'Inter', sans-serif;
-    font-size: 1.25em;
+    font-size: 1.1em;
 
-}
+
+  }
 
   .infos_cours_container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 20px;
     padding: 5px;
     border: black solid 1px;
+    background-color: #0c502b8d;
   }
-  
+
   .child-div {
-    flex: 1; /* Make both child-divs take equal width */
-    max-width: 500px;
+    flex: 1;
+    /* Make both child-divs take equal width */
+    width: 100%;
+    max-width: 290px;
     border: 1px solid #000000;
-    padding: 15px; 
+    padding: 15px;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -64,66 +213,80 @@ body {
     text-align: center;
     align-items: center;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    
+    background-color: var(--text-blanc);
   }
 
   .child-div h1 {
     font-family: 'Alfa Slab One', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
-}
+    display: inline-block;
+    /* Make the h1 element inline-block */
+  }
 
-.child-div h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
+  .child-div h1::after {
+    content: "";
+    /* Add an empty content property for pseudo-elements */
     position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
+    bottom: -10px;
+    /* Adjust the distance from the text */
     left: 0;
     width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #148849; /* Customize the color of the underline */
+    height: 5px;
+    /* Set the height/thickness of the underline */
+    background-color: #148849;
+    /* Customize the color of the underline */
     background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
     border: 3px solid #148849;
-}
-  
-.scrollable-wrapper {
-    position: relative;
-    overflow: hidden; /* Hide overflowing content */
   }
-  
+
+  .scrollable-wrapper {
+    position: relative;
+    overflow: hidden;
+    /* Hide overflowing content */
+  }
+
   .scrollable-container {
     width: 90%;
-    margin: auto; /* Center the container horizontally */
-    margin-top: 40px;
+    margin: auto;
+    /* Center the container horizontally */
+    margin-top: 20px;
     max-height: 450px;
-    overflow-y: auto; /* Adjust based on the scrollbar width */
+    overflow-y: auto;
+    /* Adjust based on the scrollbar width */
   }
 
   .scrollable-container::-webkit-scrollbar {
-    width: 10px; /* Set the width of the scrollbar */
+    width: 10px;
+    /* Set the width of the scrollbar */
   }
-  
+
   .scrollable-container::-webkit-scrollbar-thumb {
-    background-color: var(--text-blanc); /* Set the color of the scrollbar thumb */
+    background-color: var(--text-blanc);
+    /* Set the color of the scrollbar thumb */
     border-radius: 5px;
-    border: #0C502B 1px solid; /* Set the border radius of the thumb */
+    border: #0C502B 1px solid;
+    /* Set the border radius of the thumb */
   }
-  
+
   .scrollable-container::-webkit-scrollbar-track {
-    background-color: var(--main-vert); /* Set the color of the scrollbar track */
+    background-color: var(--main-vert);
+    /* Set the color of the scrollbar track */
   }
-  
+
   .scrollable-container::-webkit-scrollbar-thumb:hover {
-    background-color:#33ee87; /* Set the color on hover */
+    background-color: #33ee87;
+    /* Set the color on hover */
   }
-  
+
   .scrollable-container::-webkit-scrollbar-corner {
-    background-color: #f0f0f0; /* Set the color of the scrollbar corner */
+    background-color: #f0f0f0;
+    /* Set the color of the scrollbar corner */
   }
-  
+
   .sub-div {
     background-color: var(--main-vert);
     padding: 10px;
@@ -132,9 +295,10 @@ body {
     font-family: 'Alfa Slab One', sans-serif;
     color: var(--text-blanc);
   }
-  
+
   .sub-div:nth-child(even) {
-    background-color: var(--hover-vert) /* Set your desired background color for odd rows */
+    background-color: var(--hover-vert)
+      /* Set your desired background color for odd rows */
   }
 
   /* .cours_membre h1 {
@@ -142,9 +306,9 @@ body {
     margin-bottom: 10px;
     
   }*/
-  
- .cours_membre p {
-    margin: 0;
-  } 
 
- 
+  .cours_membre p {
+    margin: 0;
+  }
+
+}

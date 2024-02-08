@@ -92,7 +92,11 @@ const CoursMembreComponent = () => {
                     </div>
 
                 </div>
+                <div className="blankspace">
+                    <p></p>
+                </div>
             </div>
+
         </>);
 }
 

@@ -184,6 +184,9 @@ const ListeChevauxComponent = () => {
                             </form>
                         </div>
                     </div>
+                    <div className="blankspace">
+                        <p></p>
+                    </div>
                 </div>
             </div>
         </>

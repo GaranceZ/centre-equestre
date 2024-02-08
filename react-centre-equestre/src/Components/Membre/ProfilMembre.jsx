@@ -31,19 +31,19 @@ const ProfilMembreComponent = () => {
         <div className="infos_membre_container">
             <div className="infos_membre">
                 <h3>E-mail</h3>
-                <p>{user.USER_Mail}</p>
+                <p>{user ? user.USER_Mail : ''}</p>
             </div>
             <div className="infos_membre">
                 <h3>Téléphone</h3>
-                <p>{user.USER_Telephone}</p>
+                <p>{user ? user.USER_Telephone : ''}</p>
             </div>
             <div className="infos_membre">
                 <h3>Galop Actuel</h3>
-                <p>Galop {user.USER_Galop}</p>
+                <p>Galop {user ? user.USER_Galop : ''}</p>
             </div>
             <div className="infos_membre">
                 <h3>Nombre de cours restant(s)</h3>
-                <p>{user.USER_CoursRestants}</p>
+                <p>{user ? user.USER_CoursRestants : ''}</p>
             </div>
             <div className="infos_membre">
                 <h3>Prochain cours</h3>
@@ -51,7 +51,12 @@ const ProfilMembreComponent = () => {
                 <button type="button">Voir tous mes cours</button>
             </div>
         </div>
+        <div className="blankspace">
+            <p></p>
         </div>
+        </div>
+
+       
         </>
     );
 }
