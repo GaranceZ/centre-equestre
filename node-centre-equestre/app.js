@@ -3,6 +3,7 @@ const express = require('express')
 const app = express();
 const port = 8080;
 const cors = require("cors");
+const {checkTokenMiddleware} = require('./services/uti');
 
 
 app.use(express.json());
@@ -17,13 +18,13 @@ const userModule = require('./Modules/UserModule');
 const loginModule = require('./Modules/LoginModule');
 const contactModule = require('./Modules/ContactModule');
 
-app.get('/', (req, res) => {
+app.get('/',checkTokenMiddleware, (req, res) => {
     res.send('Hello, Wozerz!');
 });
 
 app.use("/cavalerie", chevalModule);
 app.use("/equipe", equipeModule);
-app.use("/user", userModule);
+app.use("/user",  userModule);
 app.use("/connexion", loginModule);
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(contactModule);
