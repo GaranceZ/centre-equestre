@@ -156,6 +156,28 @@ html::-webkit-scrollbar-track {
    
 }
 
-/* .PoneyCard div {
-    margin-top: 10px;
-} */
+
+@media screen and (max-width: 768px) {
+
+    
+    .Titre_Cavalerie h1 {
+        font-size: 34px;
+    }
+    
+    .Titre_Cavalerie h1::after {
+       
+        height: 5px; /* Set the height/thickness of the underline */
+       
+        
+       
+    }
+
+    
+    .Titre_Cavalerie_chevaux h1 {
+        font-size: 34px;
+    }
+    
+    .Titre_Cavalerie_chevaux h1::after {
+        height: 5px; /* Set the height/thickness of the underline */
+    }
+}

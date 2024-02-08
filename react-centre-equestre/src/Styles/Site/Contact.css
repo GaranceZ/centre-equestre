@@ -203,3 +203,192 @@
     background-color: #4db87d;
     cursor: pointer;
 }
+
+/* CSS TELEPHONE */
+@media screen and (max-width: 768px) {
+    .image_haut_contact{
+        height: 290px;
+        background-color: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Ensure the image doesn't overflow the container */
+    }
+    
+    .image_haut_contact img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    /* CSS TITRAGE CONTACT */
+    
+    .Titre_contact {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .Titre_contact h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block; /* Make the h1 element inline-block */
+    }
+    
+    .Titre_contact h1::after {
+        content: ""; /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px; /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px; /* Set the height/thickness of the underline */
+        background-color: #148849; /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+        
+    }
+    
+    .container_form{
+        background-color: #0c502beb;
+        width: 100%;
+        margin: 0 auto;
+        color: #fbfaf87e;
+        margin-bottom: 50px;
+        margin-top: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .img_form {
+        position: absolute;
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 570px;
+        border: var(--text-blanc) 5px solid;
+        filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+        opacity: 0.15; /* Adjust opacity as needed */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .img_form img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 570px;
+    }
+    
+    
+    
+    .contact{
+        padding: 20px;
+       
+    }
+    
+    .form {
+        /* Add some spacing to prevent the inputs from overlapping with the image */
+        padding-left: 0px;
+        position: relative; /* Ensure relative positioning for child elements */
+        z-index: 2; /* Ensure form elements are above the image */
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input_contact::placeholder, .textarea_contact::placeholder, option.sujet_default{
+        color: #fbfaf87e;
+    }
+    
+    .input_contact{
+        height: auto;
+        margin: 10px;
+        color: var(--text-blanc);
+        background-color: #fbfaf834;
+        border: var(--text-blanc) 1px solid;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        text-indent: 20px;
+        z-index: 5;
+    }
+    
+    .textarea_contact{
+        width: 90%;
+        height: 200px;
+        margin: 10px;
+        color: var(--text-blanc);
+        background-color: #fbfaf834;
+        border: var(--text-blanc) 1px solid;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        text-indent: 20px;
+        z-index: 5;
+    }
+    
+    .sujet_contact {
+        width: 90%;
+        height: auto;
+        margin: 10px;
+        color: var(--text-blanc);
+        background-color: #fbfaf834;
+        border: var(--text-blanc) 1px solid;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        text-indent: 20px;
+    }
+    
+    /* Styling for the default option in the select dropdown */
+    .sujet_contact option.sujet_default {
+        color: #fbfaf87e;
+        background-color: #148849;
+    }
+    
+    /* Styling for other options in the select dropdown */
+    .sujet_contact option:not(.sujet_default) {
+        color: #fbfaf8;
+        background-color: #148849;
+    }
+    
+    .captcha_btn{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 10px;
+        gap: 30px;
+    }
+    
+    
+    .captcha {
+        transform:scale(0.8);
+        transform-origin:0 0;
+        
+    }
+    
+    .bouton_contact{
+        background-color: var(--hover-vert);
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size: 32px;
+        border-radius: 10px;
+        padding: 20px;
+        z-index: 2;
+        width: auto;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .bouton_contact:hover{
+        background-color: #4db87d;
+        cursor: pointer;
+    }
+}

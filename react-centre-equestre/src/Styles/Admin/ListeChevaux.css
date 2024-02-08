@@ -154,5 +154,145 @@
     background-color:#45ac73;
 }
 
+@media (max-width: 768px) {
+
+    .liste_chevaux {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        max-height: 45vh;
+        overflow: hidden;
+        overflow-y: auto;
+        height: auto;
+    }
+    
+    .liste_chevaux::-webkit-scrollbar {
+        width: 10px; /* Set the width of the scrollbar */
+      }
+    
+      .liste_chevaux::-webkit-scrollbar-thumb {
+        background-color: var(--text-blanc); /* Set the color of the scrollbar thumb */
+        border-radius: 5px;
+        border: #0C502B 1px solid; /* Set the border radius of the thumb */
+      }
+    
+      .liste_chevaux::-webkit-scrollbar-track {
+        background-color: var(--main-vert); /* Set the color of the scrollbar track */
+      }
+      
+      .liste_chevaux::-webkit-scrollbar-thumb:hover {
+        background-color:#45ac73; /* Set the color on hover */
+      }
+      
+      .liste_chevaux::-webkit-scrollbar-corner {
+        background-color: #f0f0f0; /* Set the color of the scrollbar corner */
+      }
+    
+    .cheval {
+        background-color: var(--main-vert); /* Default background color */
+    }
+    
+    .cheval p{
+        width: 200px;
+    }
+    
+    .cheval:nth-child(even) {
+        background-color:var(--hover-vert) /* Set the color for even elements */
+    }
+    
+    .cheval-details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding: 1%;
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+    }
+    
+    .cheval-details:nth-child(even) {
+        background-color: var(--hover-vert);
+    }
+    
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        flex-shrink: 0; /* Prevent the image from shrinking to fit its container */
+    }
+    
+    .colored-circle {
+        width: 100%;
+        height: 100%; /* Set height to 100% to maintain a square aspect ratio */
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    /* Adjustments for handling varying content sizes */
+    .cheval-details > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text content to the start (left) */
+    }
+    
+    /* Optional: Adjust the width of the text content to prevent excessive spacing */
+    .cheval-details > div > * {
+        width: 100%; /* Make text content take the full width of its container */
+    }
+    
+    .icon_delete i:hover{
+        cursor: pointer;
+        background-color: #45ac73;
+        border-radius: 5px;
+    }
+
+    .container_modify_cheval h1{
+        margin-top: 10px;
+    }
+    
+    
+    .add_cheval_container{
+        margin-top: 50px;
+        width: 100%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    
+    .form_add_cheval{
+        background-color: var(--main-vert);
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .form_add_cheval input, .form_add_cheval select, .container_modify_cheval input{
+        margin: 10px;
+        height: auto;
+        max-width: 90%;
+        background-color: #148849;
+        color: var(--text-blanc);
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 16px;
+        border: #45ac73 1px solid;
+    }
+    
+    .form_add_cheval input::placeholder, .container_modify_cheval input::placeholder{
+        color: #fbfaf8c4;
+    }
+    
+    .container_form_cheval button, .container_modify_cheval button{
+        margin-top: 10px;
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 20px;
+        background-color: var(--hover-vert);
+        padding: 15px;
+    }
+    
+    .container_form_cheval button:hover, .container_modify_cheval button:hover{
+        background-color:#45ac73;
+    }
+}
 
 

@@ -108,26 +108,58 @@
     background-color: var(--hover-vert);
     color: white;
   }
+
+  .lien_sidebar a.active {
+    background-color: var(--hover-vert-transparent)
+  }
   
   div.content {
     margin-left: 20%;
     padding: 1px 16px;
     height: 100vh;
   }
-  
-  @media screen and (max-width: 700px) {
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidebar a {float: left;}
-    div.content {margin-left: 0;}
+
+/* Default styles for larger screens */
+.side-toggle {
+  display: none; /* Hide the burger menu icon by default on larger screens */
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .side-toggle {
+    display: block; /* Show the burger menu icon on smaller screens */
+    position: fixed;
+    top: 20px;
+    font-size: 34px;
+    left: 20px; /* Position the burger menu icon to the top right corner */
+    cursor: pointer;
+    z-index: 1000; /* Ensure burger menu icon is on top of other content */
+    color: var(--main-vert);/* Default color */
+    transition: left 0.3s ease-in-out; /* Add transition for smooth animation */
   }
   
-  @media screen and (max-width: 400px) {
-    .sidebar a {
-      text-align: center;
-      float: none;
-    }
+  .side-toggle.active {
+    color: var(--text-blanc); /* Change color to black when the sidebar is active */
+    left: 150px;
   }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hide the sidebar off-screen by default on smaller screens */
+    width: 250px;
+    height: 100%;
+    background: var(--main-vert);
+    transition: left 0.3s ease-in-out; /* Add transition for smooth animation */
+    z-index: 999; /* Ensure sidebar is behind the burger menu icon */
+  }
+
+  .sidebar.active {
+    left: 0; /* Bring the sidebar into view when active on smaller screens */
+  }
+
+  .icon_sidebar_admin p{
+    margin: auto;
+    color: var(--text-blanc);
+  }
+}

@@ -25,72 +25,6 @@ body {
     margin: 0;
 }
 
-.profil_membre {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    /* This centers the div horizontally */
-    width: 80%;
-    /* Adjust margin or padding based on sidebar width */
-    margin-left: 20%;
-    /* Other content styles */
-    padding: 2%;
-    height: auto;
-    min-height: 300px;
-    /* Set a minimum height */
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25em;
-
-}
-
-.nom_prenom h1 {
-    font-family: 'Alfa Slab One', sans-serif;
-    font-size: 2em;
-    font-weight: 200;
-    margin-top: 40px;
-}
-
-.nom_prenom p {
-    max-width: 90%;
-    font-weight: 300;
-}
-
-.infos_membre_container {
-    border: #212121 1px solid;
-    max-height: 100vh;
-    /* Set the maximum height to 100% of the viewport height */
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    /* Stack items in a column layout */
-    align-items: center;
-    padding: 5px;
-}
-
-.infos_membre {
-    margin: 5px;
-    /* Optional: Add margin between the divs */
-    text-align: center;
-    /* Center text within each div */
-    font-family: 'Alfa Slab One', sans-serif;
-    font-weight: 200;
-}
-
-.infos_membre h3 {
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-.infos_membre p {
-    background-color: var(--main-vert);
-    color: var(--text-blanc);
-    padding: 10px;
-    margin: 0 auto;
-    width: auto;
-    display: inline;
-    /* Display inline to adjust the background to the text */
-}
 
 .infos_membre button {
     display: block;
@@ -121,58 +55,8 @@ body {
 
 
 
-.modify_membre_container {
 
-    padding: 15px; 
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    align-items: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
+/* Styles for smaller screens */
+@media (max-width: 768px) {
     
-  }
-
-  .modify_membre_container h1 {
-    font-family: 'Alfa Slab One', sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
-}
-
-.modify_membre_container h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
-    position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
-    left: 0;
-    width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #148849; /* Customize the color of the underline */
-    background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
-    border: 3px solid #148849;
-}
-
-.container_form_membre{
-    background-color: var(--main-vert);
-    padding: 10px;
-    width: 80%;
-    margin: 0 auto;
-    
-}
-
-.container_form_membre input{
-    margin: 10px;
-    height: auto;
-    background-color: #148849;
-    color: var(--text-blanc);
-    font-family: 'Alfa Slab One', sans-serif;
-    font-size: 20px;
-    
-}
-
-.container_form_membre input::placeholder{
-    color: #fbfaf8c4;
 }

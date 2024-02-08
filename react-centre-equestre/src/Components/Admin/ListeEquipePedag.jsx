@@ -66,16 +66,16 @@ const ListeEquipePedagComponent = () => {
         const { name, value } = e.currentTarget;
         setUpdatedData({ ...updatedData, [name]: value });
     };
-    
+
     const handleFileChangeModify = (e) => {
         const fileName = e.target.files[0].name;
         setUpdatedData({ ...updatedData, photo: fileName });
         console.log('File Name:', fileName);
     };
-    
+
     const handleModifyEquipe = async (id) => {
         try {
-            const response = await EquipeService.updateEquipe(id, 
+            const response = await EquipeService.updateEquipe(id,
                 updatedData.nom_pedag,
                 updatedData.prenom_pedag,
                 updatedData.photo,
@@ -154,53 +154,55 @@ const ListeEquipePedagComponent = () => {
                         <div className="modify_pedag_container">
                             <h1>Modifier un membre de l'équipe</h1>
                             <div className="container_form_pedag">
-                            <input
-    type="text"
-    id="nom_pedag"
-    name="nom_pedag"
-    placeholder="Nom"
-    required
-    value={updatedData.nom_pedag}
-    onChange={handleChangeModify}
-/>
-<input
-    type="text"
-    id="prenom_pedag"
-    name="prenom_pedag"
-    placeholder="Prénom"
-    required
-    value={updatedData.prenom_pedag}
-    onChange={handleChangeModify}
-/>
-<input
-    type="file"
-    id="photo"
-    name="photo"
-    accept="image/*"
-    onChange={handleFileChangeModify}
-/>
-<input
-    type="text"
-    id="poste1"
-    name="poste1"
-    placeholder="Poste 1"
-    required
-    value={updatedData.poste1}
-    onChange={handleChangeModify}
-/>
-<input
-    type="text"
-    id="poste2"
-    name="poste2"
-    placeholder="Poste 2"
-    value={updatedData.poste2}
-    onChange={handleChangeModify}
-/>
+                                <input
+                                    type="file"
+                                    id="photo"
+                                    name="photo"
+                                    accept="image/*"
+                                    onChange={handleFileChangeModify}
+                                />
+                                <input
+                                    type="text"
+                                    id="nom_pedag"
+                                    name="nom_pedag"
+                                    placeholder="Nom"
+                                    required
+                                    value={updatedData.nom_pedag}
+                                    onChange={handleChangeModify}
+                                />
+                                <input
+                                    type="text"
+                                    id="prenom_pedag"
+                                    name="prenom_pedag"
+                                    placeholder="Prénom"
+                                    required
+                                    value={updatedData.prenom_pedag}
+                                    onChange={handleChangeModify}
+                                />
+
+                                <input
+                                    type="text"
+                                    id="poste1"
+                                    name="poste1"
+                                    placeholder="Poste 1"
+                                    required
+                                    value={updatedData.poste1}
+                                    onChange={handleChangeModify}
+                                />
+                                <input
+                                    type="text"
+                                    id="poste2"
+                                    name="poste2"
+                                    placeholder="Poste 2"
+                                    value={updatedData.poste2}
+                                    onChange={handleChangeModify}
+                                />
                                 {/* ... (add similar input fields for other properties) */}
-                                <button type="button" onClick={() => handleModifyEquipe(selectedEquipeId)}>
+                                
+                            </div>
+                            <button type="button" onClick={() => handleModifyEquipe(selectedEquipeId)}>
                                     Modifier
                                 </button>
-                            </div>
                         </div>
                     )}
 
@@ -217,10 +219,14 @@ const ListeEquipePedagComponent = () => {
 
 
                                 </div>
-                                <button type="submit" onClick={handleAddEquipe}>Ajouter</button>
+                               
                             </form>
                         </div>
+                        <button type="submit" onClick={handleAddEquipe}>Ajouter</button>
 
+                    </div>
+                    <div className="blankspace">
+                        <p></p>
                     </div>
                 </div>
 

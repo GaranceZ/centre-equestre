@@ -8,6 +8,7 @@ const Footer = () => {
             <div className='main_newsletter'>
                 <div className='follow_us'>
                     <p>Suivez-nous !</p>
+                    <div className="social">
                     <div className='facebook'>
                         <a href='https://www.facebook.com'>
                             <img src={process.env.PUBLIC_URL + '/assets/logo_footer/icon_facebook.png'} alt='Facebook Icon' />
@@ -22,6 +23,7 @@ const Footer = () => {
                         <a href='https://www.tiktok.com'>
                             <img src={process.env.PUBLIC_URL + '/assets/logo_footer/icon_tiktok.png'} alt='Tiktok Icon' />
                         </a>
+                    </div>
                     </div>
                 </div>
 

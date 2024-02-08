@@ -2,17 +2,17 @@
 @import url('https://fonts.cdnfonts.com/css/inter');
 
 
-:root{
-    --background : #FBFAF8;
-    --text-noir : #212121;
-    --main-vert : #0C502B;
-    --hover-vert : #148849;
-    --hover-vert-transparent : #148848bc;
-    --text-blanc: #FBFAF8;    
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
 }
 
 * {
-   
+
     text-decoration: none;
     list-style: none;
     outline: none;
@@ -27,7 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the container */
 }
 
 .image_haut_tarifs img {
@@ -56,31 +57,36 @@
     font-size: 48px;
     font-weight: 400;
     position: relative;
-    display: inline-block; /* Make the h1 element inline-block */
+    display: inline-block;
+    /* Make the h1 element inline-block */
 }
 
 .Titre_tarifs h1::after {
-    content: ""; /* Add an empty content property for pseudo-elements */
+    content: "";
+    /* Add an empty content property for pseudo-elements */
     position: absolute;
-    bottom: -10px; /* Adjust the distance from the text */
+    bottom: -10px;
+    /* Adjust the distance from the text */
     left: 0;
     width: 100%;
-    height: 10px; /* Set the height/thickness of the underline */
-    background-color: #148849; /* Customize the color of the underline */
+    height: 10px;
+    /* Set the height/thickness of the underline */
+    background-color: #148849;
+    /* Customize the color of the underline */
     background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
     border: 3px solid #148849;
 }
 
-.bold_forfait{
+.bold_forfait {
     font-weight: 800;
 }
 
-.italic_forfait{
+.italic_forfait {
     font-style: italic;
     font-weight: 200;
 }
 
-.forfait_initiations{
+.forfait_initiations {
     color: var(--text-blanc);
     background-color: var(--main-vert);
     padding: 5px;
@@ -91,7 +97,93 @@
     text-align: left;
 }
 
-.licence_federale p{
+.licence_federale p {
     margin-bottom: 70px;
     font-weight: 400;
+}
+
+/* CSS TELEPHONE */
+@media screen and (max-width: 768px) {
+
+    .image_haut_tarifs {
+        height: 490px;
+        background-color: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        /* Ensure the image doesn't overflow the container */
+    }
+
+    .image_haut_tarifs img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* CSS TARIFS PONEY CLUB */
+
+    .Titre_tarifs {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 30px;
+    }
+
+    .Titre_tarifs h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block;
+        /* Make the h1 element inline-block */
+    }
+
+    .Titre_tarifs h1::after {
+        content: "";
+        /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px;
+        /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px;
+        /* Set the height/thickness of the underline */
+        background-color: #148849;
+        /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+    }
+
+    .bold_forfait {
+        font-weight: 800;
+    }
+
+    .italic_forfait {
+        font-style: italic;
+        font-weight: 200;
+    }
+
+    .forfait_initiations {
+        color: var(--text-blanc);
+        background-color: var(--main-vert);
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    .Titre_tarifs p:not(.forfait_initiations p) {
+        text-align: left;
+    }
+
+    .licence_federale p {
+        margin-bottom: 70px;
+        font-weight: 400;
+    }
+
 }

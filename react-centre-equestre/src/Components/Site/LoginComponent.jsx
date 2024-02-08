@@ -41,25 +41,31 @@ const LoginComponent = () => {
         e.preventDefault();
         try {
             const response = await ConnexionService.AddConnexion(connexion);
-            console.log(response);
+            console.log('reponsse :' ,response);
+            
+            // // Extract the token from the response
+            const token = response.data.access_token;
+    
+            // // Store the token in local storage
+             localStorage.setItem('token', token);
+    
             setUserEmail(response.data.user.USER_Mail);
             setUser(response.data.user);
-
+    
             console.log(response.data.user.USER_Mail);
             console.log(response.data.user);
-
-            // // // Store user data in localStorage on successful login
-             localStorage.setItem('user', JSON.stringify(response.data.user));
-
-             if(response.data.user.USER_Role ==='admin'){
+            console.log(token);
+    
+            // Store user data in localStorage on successful login
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+    
+            if (response.data.user.USER_Role === 'admin') {
                 toast.success(`Connexion réussie. Bienvenue, ${response.data.user.USER_Nom} ${response.data.user.USER_Prenom}!`);
-            navigate('/admin/membres');
-             }else{
+                navigate('/admin/membres');
+            } else {
                 toast.success(`Connexion réussie. Bienvenue, ${response.data.user.USER_Nom} ${response.data.user.USER_Prenom}!`);
-            navigate('/profil');
-             }
-
-            
+                navigate('/profil');
+            }
         } catch (error) {
             console.log(error);
             toast.error('Connexion échouée');

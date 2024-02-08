@@ -301,3 +301,301 @@ CSS PARTIE MAP */
     font-size: 32px !important;
 }
 
+
+/* CSS TELEPHONE */
+@media screen and (max-width: 768px) {
+    .image_haut_homepage {
+        height: 290px;
+        background-color: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Ensure the image doesn't overflow the container */
+    }
+    
+    .image_haut_homepage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 55%; /* Adjust the values (percentage) based on your preference */
+    }
+    
+    
+    
+    /* CSS TITRAGE HOMEPAGE */
+    
+    .Bienvenue {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .Bienvenue h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block; /* Make the h1 element inline-block */
+    }
+    
+    .Bienvenue h1::after {
+        content: ""; /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px; /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px; /* Set the height/thickness of the underline */
+        background-color: #148849; /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+        
+       
+    }
+    
+    .bold_text{
+        font-weight: 800;
+    }
+    
+    
+    /* CSS PARTIE CHIFFRES HOMEPAGE */
+    
+    .container_all_chiffres{
+        margin-top: 50px;
+        height: auto;
+        background-color: var(--main-vert);
+        
+    }
+    
+    .container_size{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    
+    
+    .container_chifres {
+        width: 100%; /* Adjust the width as needed, considering margins */
+        margin-bottom: 40px; /* Add margin for spacing between rows */
+     
+    }
+    
+    /* Additional styling for aesthetics */
+    .chiffres_homepage h2 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 48px;
+        color: var(--text-blanc);
+        text-align: center;
+        padding: 0;
+        margin-top: 70px;
+        margin-bottom: 0;
+        
+    }
+    
+    .desc_chiffres_homepage {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        color: var(--text-blanc);
+        text-align: center;
+        margin: 0 auto; /* Set margin to 0 to remove the default margin */
+        padding: 0;
+        margin-bottom: 10px;
+        max-width: 350px;
+    }
+    
+    .texte_container_chiffres {
+        text-align: center;
+        margin: auto; /* Center the container horizontally */
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 20px;
+        color: var(--text-blanc);
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    /* CSS POUR LES LABELS */
+    
+    .container_labels {
+        width: 80%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 30px;
+    }
+    
+    .container_labels h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block; /* Make the h1 element inline-block */
+    }
+    
+    .container_labels h1::after {
+        content: ""; /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px; /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px; /* Set the height/thickness of the underline */
+        background-color: #148849; /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+    }
+    
+    .container_images_labels {
+        height: 200px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+      }
+      
+      .imagelabels {
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        transition: filter 0.3s; /* Add a smooth transition effect */
+      }
+    
+      .imagelabels:hover{
+        cursor: pointer;
+        filter: brightness(90%); /* Adjust the brightness to create a color overlay effect */
+      }
+    
+    .texte_labels{
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    /* 
+    CSS PARTIE MAP */
+    
+    .map_infos_container {
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .map_infos_container h1 {
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        position: relative;
+        display: inline-block; /* Make the h1 element inline-block */
+    }
+    
+    .map_infos_container h1::after {
+        content: ""; /* Add an empty content property for pseudo-elements */
+        position: absolute;
+        bottom: -10px; /* Adjust the distance from the text */
+        left: 0;
+        width: 100%;
+        height: 5px; /* Set the height/thickness of the underline */
+        background-color: #148849; /* Customize the color of the underline */
+        background: linear-gradient(to right, #148849 33%, #00ff0000 33%, #00ff0000 66%, #148849 66%, #148849 100%);
+        border: 3px solid #148849;
+    }
+    
+    .map_infos {
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+        background-color: #212121;
+        display: flex;
+        flex-direction: column !important;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        overflow: hidden;
+    }
+    .map_homepage{
+        background-color: aqua;
+        height: 500px;
+        width: auto;
+    }
+    
+    .infos_homepage {
+        position: relative;
+        background-color: var(--main-vert);
+        height: 300px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .img_infos_homepage {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        
+        border-radius: 300px;
+        border: var(--text-blanc) 5px solid;
+        filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+        opacity: 0.15; /* Adjust opacity as needed */
+    }
+    
+    .img_infos_homepage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 300px;
+    }
+    
+    .infos_homepage h2,
+    .infos_homepage ul, a {
+        position: relative;
+        z-index: 1;
+        text-align: center; /* Center the text horizontally */
+        color: var(--text-blanc);
+    }
+    
+    .infos_homepage h2{
+        font-family: 'Alfa Slab One', sans-serif;
+        font-size: 32px;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    .infos_homepage ul {
+        margin-top: 0;
+        padding: 0;
+        list-style: none; /* Remove default list styles (e.g., bullet points) */
+    }
+    
+    .infos_homepage ul li {
+        padding: 0; /* Remove padding from each li element */
+    }
+    
+    .infos_homepage li{
+        font-family: 'Inter', sans-serif;
+        font-size: 20px !important;
+        margin: 0 auto ;
+    }
+    
+}
+

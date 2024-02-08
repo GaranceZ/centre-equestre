@@ -1,18 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/alfa-slab-one');
 @import url('https://fonts.cdnfonts.com/css/inter');
 
-
-:root{
-    --background : #FBFAF8;
-    --text-noir : #212121;
-    --main-vert : #0C502B;
-    --hover-vert : #148849;
-    --hover-vert-transparent : #148848bc;
-    --text-blanc: #FBFAF8;    
+:root {
+    --background: #FBFAF8;
+    --text-noir: #212121;
+    --main-vert: #0C502B;
+    --hover-vert: #148849;
+    --hover-vert-transparent: #148848bc;
+    --text-blanc: #FBFAF8;
 }
 
 * {
-   
     text-decoration: none;
     list-style: none;
     outline: none;
@@ -20,8 +18,15 @@
     scroll-behavior: smooth;
     user-select: none;
 }
+
 body {
-  background-color: var(--text-blanc);
+    background-color: var(--text-blanc);
+    font-size: 16px; /* Taille de police de base */
+    font-family: 'Inter', sans-serif; /* Police par défaut */
+}
+
+html {
+    font-size: 100%; /* Réinitialisation de la taille de police sur l'élément html */
 }
 
 html::-webkit-scrollbar {
@@ -37,121 +42,194 @@ html::-webkit-scrollbar-track {
     background: var(--main-vert);
 }
 
-  
-   header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* padding: 10px 20px; */
-    background-color: var(--main-vert); /* You can change the background color as needed */
+    background-color: var(--main-vert);
     color: white;
     height: 90px;
-     position: fixed;
-    width: 100%; 
+    position: fixed;
+    width: 100%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-  } 
-  
-  .navbar_site {
+}
+
+.navbar_site {
     display: flex;
-    /* gap: 20px;  */
-    /* overflow: hidden; */
     background-color: var(--main-vert);
-    
-  }
+}
 
-
-  
-  img.logo_navbar {
-    max-width: 100px; /* Adjust the max-width as needed */
+img.logo_navbar {
+    max-width: 100px;
     max-height: 70px;
-    padding: 10px; /* Adjust the padding for the image */
+    padding: 10px;
     margin-left: 25px;
-  }
+}
 
-  .text-container {
+.text-container {
     position: relative;
     display: inline-block;
-    width: 185px;
+    width: 12rem; /* Utilisation de rem pour une largeur relative */
     text-align: center;
     font-family: 'Alfa Slab One', sans-serif;
-  }
-  
-  .text-container:hover {
+    font-size: 1.25rem; /* Taille de police relative */
+}
+
+.text-container:hover
+ {
     background-color: var(--hover-vert);
-    
 }
 
 .text-container.active{
-  background-color:var(--hover-vert-transparent);
-
+  background-color: var(--hover-vert-transparent);
 }
-  
-  .text-container a {
+
+.text-container a {
     text-decoration: none;
     color: white;
-    font-size: 20px;
     display: inline-block;
-    padding: 25px; /* Adjusted padding */
-    margin: 5px; /* Adjusted margin */
+    padding: 1.5rem; /* Utilisation de rem pour un rembourrage relatif */
+    margin: 0.5rem; /* Utilisation de rem pour une marge relative */
 }
-  
-  .text-container a::after {
+
+.text-container a::after {
     content: "";
     display: block;
     width: 0;
-    height: 8px; /* Adjust the height of the underline */
+    height: 0.5rem; /* Utilisation de rem pour la hauteur de l'underline */
     background: linear-gradient(to right, #ffffff 33%, #00ff0000 33%, #00ff0000 66%, #ffffff 66%, #ffffff 100%);
     position: absolute;
-    left: 50%; /* Center the line horizontally */
-    transform: translateX(-50%); /* Center adjustment */
-    transition: width 0.3s ease; /* Adjust the animation duration and timing function */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
 }
 
 .text-container a:hover::after {
-  width: calc(100% - 45px); /* Adjusted to account for left and right padding */
+    width: calc(100% - 3rem); /* Utilisation de rem pour ajuster la largeur */
     border: 2px solid #ffffff;
 }
 
-
-  
-  .dropdown-content {
+.dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
     display: none;
     background-color: var(--hover-vert-transparent);
-    min-width: 160px;
+    min-width: 10rem; /* Utilisation de rem pour une largeur minimale relative */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-  }
-  
-  .text-container:hover .dropdown-content {
-    display: block;
-  }
+    width: 12rem; /* Utilisation de rem pour une largeur relative */
+}
 
-  .dropdown-content ul {
+.text-container:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 185Px;
-  }
-  
-  .dropdown-content li {
+}
+
+.dropdown-content li {
     text-align: left;
     border-bottom: 1px solid #dddddd42;
-  }
+}
 
-  .dropdown_texte a{
+.dropdown_texte a {
+    font-size: 1.05rem; /* Utilisation de rem pour une taille de police relative */
+    margin: 0.5rem !important; /* Utilisation de rem pour une marge relative */
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
-    margin: 5px !important;
+}
+
+.dropdown_texte a::after {
+    height: 0.25rem !important; /* Utilisation de rem pour la hauteur de l'underline */
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+/* Hide the burger icon by default */
+.menu-toggle {
+  display: none;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  /* Display the burger icon on small screens */
+  .menu-toggle {
+    margin: 10px;
+      display: block;
+     
   }
 
-  .dropdown_texte a::after{
-    height: 4px !important;
-  }
+
+  .menu-toggle {
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: 900;
+}
+
+    /* Navbar styling */
+    .navbar_site {
+      position: fixed; /* Fixed positioning to keep the navbar at the top of the screen */
+      top: 0; /* Position the navbar at the top of the screen */
+      left: 0; /* Align the navbar to the left */
+      width: auto; /* Full width */
+      height: 100%; /* Full height */
+      background-color:#0c502bce; /* Background color */
+      flex-direction: column; /* Arrange menu items vertically */
+      padding-top: 90px; /* Add padding to account for the header */
+      transition: transform 0.3s ease; /* Smooth transition when the navbar is opened/closed */
+      transform: translateY(-100%); /* Initially move the navbar off-screen */
+      z-index: 1000; /* Ensure the navbar stays on top of other content */
+    }
   
-  .dropdown-content li:last-child {
-    border-bottom: none;
+    /* Show the navbar when the burger menu is opened */
+    .navbar_site.active {
+      transform: translateY(0); /* Move the navbar back to its original position */
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: 0;
+      left: 100%; /* Position the dropdown content to the right of the menu item */
+      display: none;
+      background-color: var(--hover-vert-transparent);
+      min-width: 10rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+    }
+  
+    .text-container:hover .dropdown-content {
+      display: block;
+    }
+  
+    .dropdown-content ul {
+      /* Other styles */
+      padding: 0.5rem 0; /* Add padding top and bottom */
+    }
+  
+    .dropdown-content li {
+      /* Other styles */
+      border: none; /* Remove border */
+    }
+  
+    /* Adjust the position of the dropdown menu items */
+    .dropdown-content li {
+      display: block;
+      width: 100%;
+    }
+  
+    .dropdown_texte a {
+      /* Other styles */
+      display: block;
+      padding: 0.5rem 1rem; /* Adjust padding */
+    }
   }
+
