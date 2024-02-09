@@ -153,10 +153,12 @@
     text-decoration: underline;
 }
 
+@media screen and (max-width: 1030px) {}
+
 
 
 /* CSS TELEPHONE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     
 .image_fond_login {
     height: 100vh;

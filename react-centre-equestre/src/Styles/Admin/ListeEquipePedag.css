@@ -136,7 +136,7 @@
     background-color:#45ac73;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .liste_equipe {
         width: 90%;

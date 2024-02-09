@@ -125,7 +125,7 @@
 }
 
 /* Styles for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .side-toggle {
     display: block; /* Show the burger menu icon on smaller screens */
     position: fixed;
