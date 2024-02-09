@@ -156,8 +156,11 @@ img.logo_navbar {
   display: none;
 }
 
+
+
+
 /* Media query for small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* Display the burger icon on small screens */
   .menu-toggle {
     margin: 10px;
@@ -175,20 +178,20 @@ img.logo_navbar {
     font-weight: 900;
 }
 
-    /* Navbar styling */
-    .navbar_site {
-      position: fixed; /* Fixed positioning to keep the navbar at the top of the screen */
-      top: 0; /* Position the navbar at the top of the screen */
-      left: 0; /* Align the navbar to the left */
-      width: auto; /* Full width */
-      height: 100%; /* Full height */
-      background-color:#0c502bce; /* Background color */
-      flex-direction: column; /* Arrange menu items vertically */
-      padding-top: 90px; /* Add padding to account for the header */
-      transition: transform 0.3s ease; /* Smooth transition when the navbar is opened/closed */
-      transform: translateY(-100%); /* Initially move the navbar off-screen */
-      z-index: 1000; /* Ensure the navbar stays on top of other content */
-    }
+.navbar_site {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%; /* Set height to 100% of viewport height */
+  background-color: #0c502bce;
+  flex-direction: column;
+  padding-top: 90px;
+  transition: transform 0.3s ease;
+  transform: translateY(-150%);
+  z-index: 1000;
+}
+
   
     /* Show the navbar when the burger menu is opened */
     .navbar_site.active {

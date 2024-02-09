@@ -205,7 +205,7 @@
 }
 
 /* CSS TELEPHONE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .image_haut_contact{
         height: 290px;
         background-color: #212121;

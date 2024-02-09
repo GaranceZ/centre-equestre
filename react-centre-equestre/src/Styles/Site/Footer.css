@@ -231,7 +231,7 @@
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
 
     .main_newsletter {
         background-color: var(--hover-vert);
@@ -352,6 +352,235 @@
     font-size: 14px;
     padding: 15px;
     flex-direction: column; /* Set flex direction to row */
+    justify-content: space-between; /* Distribute items along the main axis (horizontally) */
+}
+
+.info_gauche{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo_gauche{
+    height: 120px;
+    width: 120px;
+    /* background-color:white ; */
+}
+
+.main_all_infos h2 {
+    font-family: 'Alfa Slab One', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.texte_gauche h2{
+    margin-bottom: 0;
+}
+
+.texte_gauche ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styles (e.g., bullet points) */
+}
+
+.texte_gauche ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.info_milieu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+
+.texte_milieu h2{
+    margin-bottom: 0;
+}
+
+.texte_milieu ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; 
+    
+}
+
+.texte_milieu ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.info_droite{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+    text-align: right;
+}
+
+.info_droite a, .info_gauche a {
+    color: var(--text-blanc);
+}
+
+.info_droite a:hover, .info_gauche a:hover {
+    text-decoration: underline;
+}
+
+.texte_droite h2{
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.texte_droite ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none; /* Remove default list styles (e.g., bullet points) */
+}
+
+.texte_droite ul li {
+    padding: 0; /* Remove padding from each li element */
+}
+
+.logo_droite{
+    height: 120px;
+    width: 120px;
+}
+
+.main_all_infos img{
+   
+    width: 100%;  /* Make the image fill the entire container */
+    height: 100%; /* Make the image fill the entire container */
+    object-fit: cover;  /* or object-fit: contain; depending on your preference */
+    border-radius: 109px;
+    border: var(--text-blanc) 2px solid;
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.5));
+
+}
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .main_newsletter {
+        background-color: var(--hover-vert);
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        
+    }
+    
+    .follow_us {
+        align-items: center; /* Center children vertically */
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size: 32px;
+        width: 100%;
+        gap: 5px;
+        justify-content: center;
+    }
+    
+    .main_newsletter .follow_us {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+    }
+    
+    .main_newsletter .follow_us p {
+        margin-bottom: 10px; /* Adjust as needed */
+    }
+    
+    .main_newsletter .follow_us .social_icons {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .facebook,
+    .instagram,
+    .tiktok {
+        width: 75px; /* Adjust the width as needed */
+        height: 75px; /* Adjust the height as needed */
+        margin: 0 5px; /* Adjust the spacing between social icons */
+        overflow: hidden; /* Ensure the image is contained within the div */
+    }
+
+.facebook:hover,
+.instagram:hover,
+.tiktok:hover{
+    background-color: #48ba7b;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.facebook img,
+.instagram img,
+.tiktok img {
+    width: 100%;  /* Make the image fill the entire container */
+    height: 100%; /* Make the image fill the entire container */
+    object-fit: cover;  /* or object-fit: contain; depending on your preference */
+}
+
+.newsletter{
+    margin-top: 30px;
+        display: flex;
+        align-items: center;  /* Center children vertically */
+        font-family: 'Alfa Slab One', sans-serif;
+        color: var(--text-blanc);
+        font-size: 32px;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-direction: column;
+}
+
+.newsletter p{
+    margin: 0;
+}
+
+.mail_news{
+    height: 50Px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    border: none;
+    width: 80%;
+    text-align: center;
+}
+
+.newsletterBtn{
+    height: auto;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Alfa Slab One', sans-serif;
+    color: var(--text-blanc);
+    border-radius: 10px;
+    background-color: var(--main-vert);
+    border: var(--text-blanc) 3px solid;
+    margin-bottom: 15px;
+}
+
+.newsletterBtn:hover{
+    background-color: #48ba7b;
+    cursor: pointer;
+}
+
+
+
+/* CSS DE LA PARTIE BASSE DU FOOTER */
+
+.main_all_infos{
+    background-color: var(--main-vert);
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-blanc);
+    font-family: 'Inter',sans-serif;
+    font-size: 14px;
+    padding: 15px;
     justify-content: space-between; /* Distribute items along the main axis (horizontally) */
 }
 
