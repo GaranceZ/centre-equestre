@@ -72,7 +72,7 @@ router.delete('/:id', (req, res) => {
 router.patch('/', (req, res) => {
     const data = req.body;
     const chevalId = data.id; // Extract cheval ID from the request body
-    console.log(data);
+    // console.log(data);
     
     // Modify the data object to match the client-side property names
     const updatedData = {
@@ -82,7 +82,7 @@ router.patch('/', (req, res) => {
 
     chevalService.updateCheval(updatedData)
         .then(result => {
-            res.status(201).json({ data: result, message: `Le cheval a bien été mis à jour` });
+            res.status(201).json({ message: `Le cheval a bien été mis à jour` });
         }) 
         .catch(error => {
             console.error(error);
