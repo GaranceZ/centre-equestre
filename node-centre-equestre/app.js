@@ -9,7 +9,7 @@ const {checkTokenMiddleware} = require('./services/uti');
 app.use(express.json());
 app.use(cors({
     // origin : "http://"+URL+":3000",
-    // origin:"http://localhost:3000"
+     origin:"http://localhost:3000"
 }));
 
 const chevalModule = require('./Modules/ChevalModule');
